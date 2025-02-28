@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project coding cba</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+        }
+        .fc {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.1);
+        }
+        .fc:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        .glitch-text {
+            position: relative;
+            text-shadow: 
+                0 2px 0 #0f0,
+                -2px -2px 0 #f00,
+                2px 2px 0 #00f;
+            animation: glitch 1s infinite alternate;
+        }
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+    </style>
+</head>
+<body class="text-white">
+    <div class="container mx-auto px-4 py-16">
+        <header class="text-center mb-16">
+            <h1 class="text-5xl font-bold mb-4 text-yellow-300 glitch-text">Project coding cba  🚀</h1>
+            <p class="text-xl max-w-2xl mx-auto text-gray-200">
+                The Ultimate platform 
+            </p>
+            <img src="https://th.bing.com/th/id/OIP.K452PKyJLzYAqcOejAgHmAHaGB?w=250&h=203&c=7&r=0&o=5&dpr=1.5&pid=1.7" 
+            style="width: 100px; height: 100px; border-radius: 50%;" class="text-xl max-w-2xl mx-auto text-gray-200"
+            alt="">
+        </header>
+
+        <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="fc rounded-lg p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-green-300">🌐 User System</h2>
+                <ul class="space-y-2">
+                    <li>✅ best Signup/Login</li>
+                    <li>✅ Amin Control Panel</li>
+                    <li>✅ User Stati</li>
+                    <li>✅ Friend Discovery</li>
+                </ul>
+            </div>
+
+            <div class="fc rounded-lg p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-blue-300">💬 Chat System</h2>
+                <ul class="space-y-2">
+                    <li>✅ public / Private Chats</li>
+                    <li>✅ group Management</li>
+                    <li>✅ Realtime chat</li>
+                </ul>
+            </div>
+
+            <div class="fc rounded-lg p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-purple-300">🛒 Market</h2>
+                <ul class="space-y-2">
+                    <li>✅ Buy / Sell Platform</li>
+                    <li>✅ Seller Rating</li>
+                    <li>✅ Admin Moderation</li>
+                </ul>
+            </div>
+
+            <div class="fc rounded-lg p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-red-300">🌍 Community Platform</h2>
+                <ul class="space-y-2">
+                    <li>✅ post Updates</li>
+                    <li>✅ like/cislike/comment</li>
+                    <li>✅ celective posting privileges</li>
+                </ul>
+            </div>
+
+            <div class="fc rounded-lg p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-indigo-300">🎮 Game Hosting</h2>
+                <ul class="space-y-2">
+                    <li>✅ Inbrowser Gaming</li>
+                    <li>✅ builtin ad blocker</li>
+                    <li>✅ seamless experience</li>
+                </ul>
+            </div>
+
+            <div class="fc rounded-lg p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-pink-300">💻 Tech need</h2>
+                <ul class="space-y-2">
+                    <li>✅ html, css, Js / Ts</li>
+                    <li>✅ flask Backend</li>
+                    
+                </ul>
+            </div>
+        </section>
+
+        <div class="text-center mt-16">
+            <a id="discordLink" href="https://discord.gg/XcG6gEqY" 
+               class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-full text-xl transition duration-300 transform hover:scale-105 inline-block">
+                Join Our Discord
+            </a>
+        </div>
+
+        <footer class="text-center mt-16 text-gray-300">
+            <p>© 2024 Project coding cba. All Rights Reserved.</p>
+            <p>by victor</p>
+            
+        </footer>
+    </div>
+
+   
+</body>
+</html>
