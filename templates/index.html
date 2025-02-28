@@ -1,135 +1,518 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project coding cba</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>CODING CBA</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
         body {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            font-family: 'Arial', sans-serif;
-            min-height: 100vh;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
         }
-        .fc {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(10px);
-            background: rgba(255,255,255,0.1);
+        
+        .big-dawg {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        .fc:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        
+        .vibes-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
-        .glitch-text {
-            position: relative;
-            text-shadow: 
-                0 2px 0 #0f0,
-                -2px -2px 0 #f00,
-                2px 2px 0 #00f;
-            animation: glitch 1s infinite alternate;
+        
+        h1 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
         }
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
+        
+        h2 {
+            color: #2c3e50;
+            margin: 1.5rem 0 0.8rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #3498db;
+            font-weight: 700;
+        }
+        
+        h3 {
+            color: #3498db;
+            margin: 1.2rem 0 0.6rem 0;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .content-drip {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .content-drip:hover {
+            transform: translateY(-5px);
+        }
+        
+        code {
+            background-color: #f1f1f1;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .code-bussin {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1rem;
+            border-left: 4px solid #3498db;
+        }
+        
+        .fire-tip {
+            border-left: 4px solid #e74c3c;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            background-color: #fff9f9;
+        }
+        
+        .goated-list {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .no-cap-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .no-cap-table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .tag-yap {
+            color: #e74c3c;
+        }
+        
+        .prop-slay {
+            color: #9b59b6;
+        }
+        
+        .val-lit {
+            color: #2ecc71;
+        }
+        
+        .smol-dawg {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .vibes-wrapper {
+                padding: 1rem;
+            }
+            
+            .content-drip {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
-<body class="text-white">
-    <div class="container mx-auto px-4 py-16">
-        <header class="text-center mb-16">
-            <h1 class="text-5xl font-bold mb-4 text-yellow-300 glitch-text">Project coding cba  🚀</h1>
-            <p class="text-xl max-w-2xl mx-auto text-gray-200">
-                The Ultimate platform 
-            </p>
-            <img src="https://th.bing.com/th/id/OIP.K452PKyJLzYAqcOejAgHmAHaGB?w=250&h=203&c=7&r=0&o=5&dpr=1.5&pid=1.7" 
-            style="width: 100px; height: 100px; border-radius: 50%;" class="text-xl max-w-2xl mx-auto text-gray-200"
-            alt="">
-        </header>
+<body>
+    <header class="big-dawg">
+        <h1>HTML & CSS Cheat Sheet</h1>
+        <p>No cap, just straight truth about web dev </p>
+    </header>
 
-        <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="fc rounded-lg p-6">
-                <h2 class="text-2xl font-semibold mb-4 text-green-300">🌐 User System</h2>
-                <ul class="space-y-2">
-                    <li>✅ best Signup/Login</li>
-                    <li>✅ Amin Control Panel</li>
-                    <li>✅ User Stati</li>
-                    <li>✅ Friend Discovery</li>
-                </ul>
-            </div>
-
-            <div class="fc rounded-lg p-6">
-                <h2 class="text-2xl font-semibold mb-4 text-blue-300">💬 Chat System</h2>
-                <ul class="space-y-2">
-                    <li>✅ public / Private Chats</li>
-                    <li>✅ group Management</li>
-                    <li>✅ Realtime chat</li>
-                </ul>
-            </div>
-
-            <div class="fc rounded-lg p-6">
-                <h2 class="text-2xl font-semibold mb-4 text-purple-300">🛒 Market</h2>
-                <ul class="space-y-2">
-                    <li>✅ Buy / Sell Platform</li>
-                    <li>✅ Seller Rating</li>
-                    <li>✅ Admin Moderation</li>
-                </ul>
-            </div>
-
-            <div class="fc rounded-lg p-6">
-                <h2 class="text-2xl font-semibold mb-4 text-red-300">🌍 Community Platform</h2>
-                <ul class="space-y-2">
-                    <li>✅ post Updates</li>
-                    <li>✅ like/cislike/comment</li>
-                    <li>✅ celective posting privileges</li>
-                </ul>
-            </div>
-
-            <div class="fc rounded-lg p-6">
-                <h2 class="text-2xl font-semibold mb-4 text-indigo-300">🎮 Game Hosting</h2>
-                <ul class="space-y-2">
-                    <li>✅ Inbrowser Gaming</li>
-                    <li>✅ builtin ad blocker</li>
-                    <li>✅ seamless experience</li>
-                </ul>
-            </div>
-
-            <div class="fc rounded-lg p-6">
-                <h2 class="text-2xl font-semibold mb-4 text-pink-300">💻 Tech need</h2>
-                <ul class="space-y-2">
-                    <li>✅ html, css, Js / Ts</li>
-                    <li>✅ flask Backend</li>
-                    
-                </ul>
-            </div>
-        </section>
-
-        <div class="text-center mt-16">
-            <a id="discordLink" href="https://discord.gg/XcG6gEqY" 
-               class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-full text-xl transition duration-300 transform hover:scale-105 inline-block">
-                Join Our Discord
-            </a>
-        </div>
-
-        <footer class="text-center mt-16 text-gray-300">
-            <p>© 2024 Project coding cba. All Rights Reserved.</p>
-            <p>by victor</p>
+    <div class="vibes-wrapper">
+        <!-- html tim -->
+        <div class="content-drip">
+            <h2>HTML Basics (The Rizz Framework)</h2>
+            <p>HTML is like the skeleton of your web page - it gives structure but needs CSS to look good (like how rizz needs confidence). You get me</p>
             
-        </footer>
+            <h3>Document  Check</h3>
+            <div class="code-bussin">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;time to cooks&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Your fuction(div, form, input, output) goes here --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</div>
+            
+            <h3>Tags Time </h3>
+            <table class="no-cap-table">
+                <tr>
+                    <th>Tag</th>
+                    <th>What It Do</th>
+                </tr>
+                <tr>
+                    <td><code>&lt;h1&gt; to &lt;h6&gt;</code></td>
+                    <td>Headings (h1 is the main character and he is the bigman and he gives the big man thing, h6 is the side character let skip him he is less)
+					(just know the bigger the number the smaller the font)</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;p&gt;</code></td>
+                    <td>For your paragraph text (your main story, that where you put your yap)</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;a&gt;</code></td>
+                    <td>Links to take your visitors elsewhere(you can take your user anywhere you want or feel )</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;img&gt;</code></td>
+                    <td>Drop those fire pics( )</td>
+					
+                </tr>
+                <tr>
+                    <td><code>&lt;div&gt;</code></td>
+                    <td>The box that holds your stuff together(it like your pc box)</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;span&gt;</code></td>
+                    <td>For highlighting text mid-sentence</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code></td>
+                    <td>For making bullet points and numbered lists(like the one you use in powerpoint or world)</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;table&gt;</code></td>
+                    <td>For data that needs rows and columns</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;form&gt;</code></td>
+                    <td>For getting info from your visitors(like when u need to adk for password</td>
+                </tr>
+            </table>
+            
+            <h3>HTML Attribute Game</h3>
+            <p>Attributes are like accessories for your HTML - they add extra drip:</p>
+            <div class="code-bussin">&lt;a <span class="prop-slay">href</span>=<span class="val-lit">"https://poki.com"</span>&gt;Click this heat&lt;/a&gt;
+&lt;img <span class="prop-slay">src</span>=<span class="val-lit">"fire-pic.jpg"</span> <span class="prop-slay">alt</span>=<span class="val-lit">"This pic goes hard"</span>&gt;</div>
+            
+            <h3>Semantic HTML (Big Brain Energy)</h3>
+            <p>Using the right tags for the right job = make you look elite even if your are not:</p>
+            <ul class="goated-list">
+                <li><code>&lt;header&gt;</code> - The intro section that sets the vibe</li>
+                <li><code>&lt;nav&gt;</code> - Where your navigation links live</li>
+                <li><code>&lt;main&gt;</code> - Your main content (the real tea)</li>
+                <li><code>&lt;article&gt;</code> - A complete piece that makes sense on its own</li>
+                <li><code>&lt;section&gt;</code> - A chunk of related content</li>
+                <li><code>&lt;aside&gt;</code> - Side content (like bonus material)</li>
+                <li><code>&lt;footer&gt;</code> - The outro where credits and links go</li>
+            </ul>
+            
+            <div class="fire-tip">
+                <p><strong>fire Tip:</strong> Using semantic HTML makes your site more accessible and helps with SEO. It's like having good game - structure matters!</p>
+            </div>
+        </div>
+        
+
+        <div class="content-drip">
+            <h2>CSS Basics (The Drip Science)</h2>
+            <p>CSS is how you make your HTML look fire. It's literally the difference between basic and bussin'.</p>
+            
+            <h3>CSS Syntax</h3>
+            <div class="code-bussin"><span class="tag-yap">what-to-style</span> {
+    <span class="prop-slay">which-property</span>: <span class="val-lit">what-value</span>;
+    <span class="prop-slay">another-property</span>: <span class="val-lit">another-value</span>;
+}</div>
+            
+            <h3>Ways to Add Your Drip</h3>
+            <ol class="goated-list">
+                <li>
+                    <p><strong>Inline Styling</strong> (emergency use only):</p>
+                    <div class="code-bussin">&lt;p <span class="prop-slay">style</span>=<span class="val-lit">"color: red; font-size: 16px;"</span>&gt;Text with drip&lt;/p&gt;</div>
+                </li>
+                <li>
+                    <p><strong>Internal Styling</strong> (for one-page wonders):</p>
+                    <div class="code-bussin">&lt;head&gt;
+    &lt;style&gt;
+        p {
+            color: red;
+            font-size: 16px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</div>
+                </li>
+                <li>
+                    <p><strong>External Styling</strong> (the elite way):</p>
+                    <div class="code-bussin">&lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</div>
+                </li>
+            </ol>
+            
+            <h3>Selector Game</h3>
+            <table class="no-cap-table">
+                <tr>
+                    <th>Selector Type</th>
+                    <th>Example</th>
+                    <th>What It Targets</th>
+                </tr>
+                <tr>
+                    <td>Basic Tag</td>
+                    <td><code>p { }</code></td>
+                    <td>All paragraph tags</td>
+                </tr>
+                <tr>
+                    <td>ID (use #)</td>
+                    <td><code>#main-rizz { }</code></td>
+                    <td>The element with id="main-rizz"</td>
+                </tr>
+                <tr>
+                    <td>Class (use .)</td>
+                    <td><code>.bussin-content { }</code></td>
+                    <td>All elements with class="bussin-content"</td>
+                </tr>
+                <tr>
+                    <td>Universal</td>
+                    <td><code>* { }</code></td>
+                    <td>Everything on the page</td>
+                </tr>
+                <tr>
+                    <td>Multiple</td>
+                    <td><code>h1, h2, .big-vibes { }</code></td>
+                    <td>All h1, h2, and elements with class="big-vibes"</td>
+                </tr>
+                <tr>
+                    <td>Child</td>
+                    <td><code>.parent-flex > .child-drip { }</code></td>
+                    <td>Direct children with class="child-drip" inside parent</td>
+                </tr>
+            </table>
+            
+            <h3>Text Styling Properties</h3>
+            <div class="code-bussin">p {
+    <span class="prop-slay">color</span>: <span class="val-lit">#333333</span>;
+    <span class="prop-slay">font-family</span>: <span class="val-lit">'Poppins', sans-serif</span>;
+    <span class="prop-slay">font-size</span>: <span class="val-lit">16px</span>;
+    <span class="prop-slay">font-weight</span>: <span class="val-lit">bold</span>;
+    <span class="prop-slay">text-align</span>: <span class="val-lit">center</span>;
+    <span class="prop-slay">text-shadow</span>: <span class="val-lit">1px 1px 2px #000</span>;
+    <span class="prop-slay">letter-spacing</span>: <span class="val-lit">1px</span>;
+}</div>
+            
+            <h3>Box Model (The Shape Game)</h3>
+            <div class="code-bussin">#vibe-check {
+    <span class="prop-slay">width</span>: <span class="val-lit">300px</span>;
+    <span class="prop-slay">height</span>: <span class="val-lit">200px</span>;
+    <span class="prop-slay">padding</span>: <span class="val-lit">20px</span>;
+    <span class="prop-slay">margin</span>: <span class="val-lit">10px</span>;
+    <span class="prop-slay">border</span>: <span class="val-lit">1px solid #000</span>;
+    <span class="prop-slay">border-radius</span>: <span class="val-lit">10px</span>;
+    <span class="prop-slay">box-shadow</span>: <span class="val-lit">0 4px 8px rgba(0,0,0,0.1)</span>;
+}</div>
+            
+            <div class="fire-tip">
+                <p><strong>No Cap:</strong> The box model is content + padding + border + margin. It's like layers of an outfit - the core piece plus all the accessories.</p>
+            </div>
+            
+            <h3>Background Vibes</h3>
+            <div class="code-bussin">.main-character {
+    <span class="prop-slay">background-color</span>: <span class="val-lit">#f0f0f0</span>;
+    <span class="prop-slay">background-image</span>: <span class="val-lit">url('cool-pattern.jpg')</span>;
+    <span class="prop-slay">background-repeat</span>: <span class="val-lit">no-repeat</span>;
+    <span class="prop-slay">background-position</span>: <span class="val-lit">center</span>;
+    <span class="prop-slay">background-size</span>: <span class="val-lit">cover</span>;
+}</div>
+            
+            <h3>Flex Layout (God Tier)</h3>
+            <p>Flexbox is like having rizz for layouts - things just flow right:</p>
+            <div class="code-bussin">.flex-container {
+    <span class="prop-slay">display</span>: <span class="val-lit">flex</span>;
+    <span class="prop-slay">flex-direction</span>: <span class="val-lit">row</span>; /* or column */
+    <span class="prop-slay">justify-content</span>: <span class="val-lit">space-between</span>; /* horizontal alignment */
+    <span class="prop-slay">align-items</span>: <span class="val-lit">center</span>; /* vertical alignment */
+    <span class="prop-slay">flex-wrap</span>: <span class="val-lit">wrap</span>; /* let items move to next line */
+    <span class="prop-slay">gap</span>: <span class="val-lit">10px</span>; /* space between items */
+}</div>
+            
+            <h3>Grid Layout (Elite Mode)</h3>
+            <p>CSS Grid is for when you need that perfect Instagram feed layout:</p>
+            <div class="code-bussin">.grid-layout {
+    <span class="prop-slay">display</span>: <span class="val-lit">grid</span>;
+    <span class="prop-slay">grid-template-columns</span>: <span class="val-lit">repeat(3, 1fr)</span>; /* three equal columns */
+    <span class="prop-slay">grid-gap</span>: <span class="val-lit">10px</span>;
+    <span class="prop-slay">grid-template-areas</span>: <span class="val-lit">
+        "header header header"
+        "sidebar main main"
+        "footer footer footer"</span>;
+}</div>
+            
+            <h3>Responsive Design (Adapt King)</h3>
+            <p>Make your site look good on any device:</p>
+            <div class="code-bussin">@media screen and (max-width: 768px) {
+    .flex-container {
+        <span class="prop-slay">flex-direction</span>: <span class="val-lit">column</span>;
+    }
+    
+    .big-text {
+        <span class="prop-slay">font-size</span>: <span class="val-lit">18px</span>; /* smaller on mobile */
+    }
+}</div>
+        </div>
+        
+        <!-- CSS UNITS -->
+        <div class="content-drip">
+            <h2>CSS Unit Game</h2>
+            
+            <h3>Absolute Units (Fixed Size)</h3>
+            <ul class="goated-list">
+                <li><code>px</code> - Pixels (OG unit, always the same size)</li>
+                <li><code>pt</code> - Points (print design vibes)</li>
+                <li><code>in</code> - Inches (rarely used online)</li>
+                <li><code>cm</code> - Centimeters (European flex)</li>
+                <li><code>mm</code> - Millimeters (super precise flex)</li>
+            </ul>
+            
+            <h3>Relative Units (Adaptive Kings)</h3>
+            <ul class="goated-list">
+                <li><code>%</code> - Percentage (relative to parent - like inheriting your style)</li>
+                <li><code>em</code> - Based on parent font size (family vibes)</li>
+                <li><code>rem</code> - Based on root font size (consistent across site)</li>
+                <li><code>vw</code> - Viewport width % (screen-width dependent)</li>
+                <li><code>vh</code> - Viewport height % (screen-height dependent)</li>
+                <li><code>vmin</code> - % of smaller viewport dimension (adaptive flex)</li>
+                <li><code>vmax</code> - % of larger viewport dimension (bigger adaptive flex)</li>
+            </ul>
+            
+            <div class="fire-tip">
+                <p><strong>Elite Tip:</strong> Use <code>rem</code> for font sizes and spacing for consistent scaling. Use <code>%</code> and viewport units for layout. Pixels are only for borders and tiny details.</p>
+            </div>
+        </div>
+        
+        <!-- BEST PRACTICES -->
+        <div class="content-drip">
+            <h2>How To Not Be Basic</h2>
+            
+            <h3>HTML Do's and Don'ts</h3>
+            <ul class="goated-list">
+                <li>Keep your HTML tags lowercase (uppercase is giving boomer energy)</li>
+                <li>Close all your tags (don't leave things hanging)</li>
+                <li>Use class names that actually make sense for what they do</li>
+                <li>Add alt text to images (accessibility = elite behavior)</li>
+                <li>Use semantic tags instead of div soup everywhere</li>
+                <li>Test your site on different browsers (Chrome isn't the only one)</li>
+            </ul>
+            
+            <h3>CSS Glow Up Tips</h3>
+            <ul class="goated-list">
+                <li>Keep your CSS in separate files (organization = king behavior)</li>
+                <li>Group related styles together (not random scattering)</li>
+                <li>Use a CSS reset to avoid browser default chaos</li>
+                <li>Avoid using !important (it's like yelling - only do it when necessary)</li>
+                <li>Use shorthand properties to keep code clean</li>
+                <li>Build mobile-first (small screens first, then add for bigger screens)</li>
+                <li>Comment your complex CSS so future you doesn't get confused</li>
+            </ul>
+            
+            <div class="fire-tip">
+                <p><strong>Real Talk:</strong> The best websites aren't the ones with the most CSS tricks. They're the ones that load fast, work on any device, and make content easy to find. Focus on the user experience first, fancy animations second.</p>
+            </div>
+        </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
-<script>
-    const socket = io();
 
-    socket.on('reload', () => {
-        window.location.reload();
-    });
-</script>
+    <footer class="smol-dawg">
+        <p>CODING CBA - HTML and CSS victor revison Sheet</p>
+        <p>This site absolutely slaps &copy; 2025</p>
+        <img src="https://media.tenor.com/iUygN_thLdMAAAAi/like-share-comment.gif" alt="like" style="height: 200px;">
+		<div class="like-container">
+        <h2>Like Counter</h2>
+        <div class="like-count" id="likeCount">0 likes</div>
+        <button class="like-button" id="likeButton">
+            <span class="heart-icon">❤️</span> Like
+        </button>
+        <p>please spam</p>
+    </div>
 
-   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const likeButton = document.getElementById('likeButton');
+            const likeCount = document.getElementById('likeCount');
+            
+            
+            fetchLikeCount();
+            
+            
+            likeButton.addEventListener('click', function() {
+                incrementLike();
+            });
+            
+            
+            function fetchLikeCount() {
+                fetch('/get_likes')
+                    .then(response => response.json())
+                    .then(data => {
+                        likeCount.textContent = `${data.likes} likes`;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching like count:', error);
+                    });
+            }
+            
+            
+            function incrementLike() {
+                fetch('/increment_like', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        likeCount.textContent = `${data.likes} likes`;
+                    })
+                    .catch(error => {
+                        console.error('Error ', error);
+                    });
+            }
+        });
+    </script>
+    <p>If you still have a problem, go to <a href="https://youtu.be/HGTJBPNC-Gw?si=iS4fabNc5waIS14W" target="_blank">this link is to my bro youtube channel BRO CODE</a>.</p>
+
+    </footer>
 </body>
 </html>
